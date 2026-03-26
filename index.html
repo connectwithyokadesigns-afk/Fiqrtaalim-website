@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FiqrTaalim | Halal Ecommerce Bootcamp — Build Your Halal Income</title>
+<meta name="description" content="Join 33,495+ Muslims learning to launch a halal e-commerce business. 2-hour LIVE webinar in Hindi & English — no experience needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     LOADING SCREEN
+============================================================ -->
+<div id="loader">
+  <div class="l-bg-pattern"></div>
+  <div class="l-radial"></div>
+  <div id="l-particles"></div>
+
+  <div class="l-mandala">
+    <div class="l-ring"></div>
+    <div class="l-ring"></div>
+    <div class="l-ring"></div>
+    <div class="l-ring"></div>
+
+    <svg class="l-star-a" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <polygon points="130,6 146,50 188,28 186,74 230,64 214,104 256,108 234,142 252,176 216,176 218,220 186,202 176,246 130,224 84,246 74,202 42,220 44,176 8,176 26,142 4,108 46,104 30,64 74,74 72,28 114,50"
+        fill="none" stroke="rgba(240,192,64,.35)" stroke-width="1.2"/>
+      <circle cx="130" cy="130" r="55" fill="none" stroke="rgba(61,214,140,.25)" stroke-width=".8" stroke-dasharray="4 4"/>
+    </svg>
+    <svg class="l-star-b" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <polygon points="75,4 83,28 106,14 104,40 128,36 116,58 138,64 122,82 132,106 108,104 110,128 90,116 84,140 75,122 66,140 60,116 40,128 42,104 18,106 28,82 12,64 34,58 22,36 46,40 44,14 67,28"
+        fill="none" stroke="rgba(240,192,64,.55)" stroke-width="1"/>
+    </svg>
+
+    <div class="l-arabic">بِسْمِ اللهِ</div>
+  </div>
+
+  <div class="l-info">
+    <div class="l-brand">Fiqr<span>Taalim</span></div>
+    <div class="l-tag">Halal Ecommerce Bootcamp</div>
+    <div class="l-dots">
+      <div class="l-dot"></div>
+      <div class="l-dot"></div>
+      <div class="l-dot"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     30-SEC POPUP
+============================================================ -->
+<div id="popup-ov">
+  <div class="popup">
+    <div class="popup-head">
+      <div class="popup-head-pat" aria-hidden="true">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="pp" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+              <polygon points="24,2 28,12 38,8 37,18 46,18 41,26 46,34 37,34 38,44 28,40 24,48 20,40 10,44 11,34 2,34 7,26 2,18 11,18 10,8 20,12" fill="none" stroke="rgba(240,192,64,1)" stroke-width=".7"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#pp)"/>
+        </svg>
+      </div>
+      <button class="popup-close" onclick="closePopup()" aria-label="Close popup">✕</button>
+      <div class="p-badge">🔥 Only a Few Spots Left</div>
+      <div class="p-arabic">لَا تُضَيِّعْ فُرْصَتَكَ</div>
+      <div class="p-title">Don't Miss Building Your <em>Halal Income</em></div>
+      <div class="p-sub">28th &amp; 29th March — Live Webinar seats are filling fast!</div>
+    </div>
+    <div class="popup-body">
+      <div class="p-offer">
+        <div class="p-price-wrap">
+          <span class="p-old">₹5,000+ value</span>
+          <div class="p-price">₹799</div>
+          <span class="p-note">One-time • Lifetime recordings access</span>
+        </div>
+        <div class="p-emoji" aria-hidden="true">🕌</div>
+      </div>
+      <a href="#enroll" class="p-cta" onclick="closePopup()">Book My Spot @ ₹799 →</a>
+      <div class="p-timer">⏰ Limited offer expires in: <strong id="timerTxt" style="color:var(--gold2);">10:00</strong></div>
+      <div class="p-skip" onclick="closePopup()">No thanks, I'll pass this opportunity</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAV — Logo + links only, NO Book button
+============================================================ -->
+<!-- Countdown ribbon -->
+<div class="countdown-ribbon">
+  🕌 <strong>28th &amp; 29th March</strong> — Live Webinar seats filling fast! &nbsp;•&nbsp; Only <strong id="seatCount">23</strong> seats remaining
+</div>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero">
+  <!-- Islamic geometric patterns — decorative -->
+  <div class="hero-pat hero-pat-tl" aria-hidden="true">
+    <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:.08;">
+      <polygon points="110,5 124,42 158,22 156,60 192,50 178,84 212,90 194,116 208,146 174,146 176,180 148,164 140,198 110,180 80,198 72,164 44,180 46,146 12,146 26,116 8,90 42,84 28,50 64,60 62,22 96,42" fill="none" stroke="rgba(240,192,64,1)" stroke-width="1.2"/>
+      <circle cx="110" cy="110" r="42" fill="none" stroke="rgba(61,214,140,1)" stroke-width=".9" stroke-dasharray="3 4"/>
+      <polygon points="110,68 119,94 146,94 126,112 134,138 110,122 86,138 94,112 74,94 101,94" fill="rgba(240,192,64,.35)"/>
+    </svg>
+  </div>
+  <div class="hero-pat hero-pat-br" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:.07;">
+      <polygon points="100,5 113,40 146,22 144,56 178,46 164,78 196,82 178,106 192,134 162,134 164,166 136,150 128,182 100,164 72,182 64,150 36,166 38,134 8,134 22,106 4,82 36,78 22,46 56,56 54,22 87,40" fill="none" stroke="rgba(61,214,140,1)" stroke-width="1.2"/>
+      <circle cx="100" cy="100" r="38" fill="none" stroke="rgba(240,192,64,1)" stroke-width=".8" stroke-dasharray="3 4"/>
+    </svg>
+  </div>
+  <div class="hero-pat hero-pat-tr" aria-hidden="true">
+    <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:.06;">
+      <polygon points="80,4 90,32 116,18 114,46 140,40 130,64 154,68 140,86 150,108 126,108 128,132 108,122 102,148 80,134 58,148 52,122 32,132 34,108 10,108 20,86 6,68 30,64 20,40 46,46 44,18 70,32" fill="none" stroke="rgba(240,192,64,1)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <!-- Crescent moon -->
+  <svg class="hero-crescent" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M50 10 A28 28 0 1 0 50 62 A18 18 0 1 1 50 10Z" fill="rgba(240,192,64,.9)"/>
+    <circle cx="56" cy="20" r="2.5" fill="rgba(240,192,64,.7)"/>
+    <circle cx="62" cy="32" r="1.8" fill="rgba(240,192,64,.55)"/>
+    <circle cx="57" cy="43" r="2.2" fill="rgba(240,192,64,.65)"/>
+  </svg>
+
+  <!-- Sparkles -->
+  <div class="sp" aria-hidden="true" style="width:5px;height:5px;background:rgba(240,192,64,.7);top:14%;left:10%;animation-duration:3.2s;animation-delay:0s;"></div>
+  <div class="sp" aria-hidden="true" style="width:4px;height:4px;background:rgba(61,214,140,.8);top:22%;left:90%;animation-duration:4s;animation-delay:.7s;"></div>
+  <div class="sp" aria-hidden="true" style="width:6px;height:6px;background:rgba(240,192,64,.5);top:55%;left:5%;animation-duration:3.6s;animation-delay:1.4s;"></div>
+  <div class="sp" aria-hidden="true" style="width:3px;height:3px;background:rgba(61,214,140,.65);top:72%;left:93%;animation-duration:2.9s;animation-delay:.4s;"></div>
+  <div class="sp" aria-hidden="true" style="width:4px;height:4px;background:rgba(255,255,255,.5);top:38%;left:3%;animation-duration:4.4s;animation-delay:1s;"></div>
+  <div class="sp" aria-hidden="true" style="width:3px;height:3px;background:rgba(240,192,64,.6);top:80%;left:50%;animation-duration:3.8s;animation-delay:.2s;"></div>
+
+  <div class="hero-dot-grid" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="sr">
+      <div class="hero-badge">
+        <div class="hero-badge-dot" aria-hidden="true"></div>
+        Live Webinar &nbsp;•&nbsp; 28th &amp; 29th March
+      </div>
+    </div>
+    <div class="hero-arabic sr d1">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيم</div>
+    <h1 class="serif sr d1">
+      Build a <em>Halal Business</em><br>From Home — Step by Step
+    </h1>
+    <p class="hero-sub sr d2">
+      Join 33,495+ Muslims learning to launch a successful Islamic e-commerce business. 2-hour LIVE webinar in Hindi &amp; English — no experience needed.
+    </p>
+    <div class="hero-ctas sr d3">
+      <a href="#enroll" class="btn btn-primary btn-lg">Book Your Spot @ ₹799 →</a>
+      <a href="#features" class="btn btn-outline btn-lg">See What's Inside</a>
+    </div>
+    <div class="hero-trust sr d4">
+      <div class="trust-item"><span class="trust-icon" aria-hidden="true">✓</span>33,495+ Students</div>
+      <div class="trust-item"><span class="trust-icon" aria-hidden="true">✓</span>100% Working Model</div>
+      <div class="trust-item"><span class="trust-icon" aria-hidden="true">✓</span>Fully Halal &amp; Islamic</div>
+      <div class="trust-item"><span class="trust-icon" aria-hidden="true">✓</span>100% Money Back</div>
+    </div>
+    <div class="hero-video sr d4">
+      <iframe src="https://www.youtube.com/embed/mi-tn_2JVZ0?rel=0&modestbranding=1" title="FiqrTaalim Introduction" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INFO CARDS — Date & Time centred, Language left-aligned
+============================================================ -->
+<section class="info-sec section-pad">
+  <div class="container">
+    <div class="sr">
+      <div class="label">Webinar Details</div>
+      <h2 class="section-title">Everything You Need to Know</h2>
+    </div>
+    <div class="info-grid">
+      <!-- Language — LEFT column, left-aligned text -->
+      <div class="info-card info-card--lang sr d1">
+        <div class="info-icon" aria-hidden="true">🗣️</div>
+        <div class="info-title">Language</div>
+        <div class="info-val">Hinglish</div>
+        <div class="info-sub">Hindi &amp; English mix<br>Easy to understand for all</div>
+        <div class="info-bar"></div>
+      </div>
+      <!-- Date & Time — CENTRE column, centred text -->
+      <div class="info-card info-card--date sr d2">
+        <div class="info-icon" aria-hidden="true">📅</div>
+        <div class="info-title">Date &amp; Time</div>
+        <div class="info-val">28th &amp; 29th March</div>
+        <div class="info-sub">12:30 PM – 2:30 PM daily<br>Namaz break: 1:28 – 1:40 PM</div>
+        <div class="info-bar"></div>
+      </div>
+      <!-- Format — RIGHT column -->
+      <div class="info-card sr d3">
+        <div class="info-icon" aria-hidden="true">📡</div>
+        <div class="info-title">Format</div>
+        <div class="info-val">Live 2-Hour Webinar</div>
+        <div class="info-sub">Interactive Q&amp;A session<br>with real-time support</div>
+        <div class="info-bar"></div>
+      </div>
+    </div>
+    <div class="stats-strip sr d2">
+      <div class="stat-cell">
+        <div class="stat-num">33,495+</div>
+        <div class="stat-label">Total Learners</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">₹2 Cr+</div>
+        <div class="stat-label">Revenue Generated</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Halal Certified</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIDEO TESTIMONIAL
+============================================================ -->
+<section class="vid-sec section-pad">
+  <div class="container text-center">
+    <div class="sr">
+      <div class="label" style="justify-content:center;">Student Results</div>
+      <h2 class="section-title">Hear From Our Students</h2>
+      <p class="section-sub" style="margin:0 auto;">Real experiences from people who transformed their lives through FiqrTaalim.</p>
+    </div>
+    <div class="vid-wrap sr d2">
+      <video controls preload="none" loading="lazy">
+        <source src="https://fiqrtaalim.com/wp-content/uploads/2026/03/testimonial-1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="sr d3" style="margin-top:36px;">
+      <a href="#enroll" class="btn btn-primary btn-lg">Join 33,495+ Learners → Enroll @ ₹799</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT — People Trusted Us with separator line
+============================================================ -->
+<section class="about-sec section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="sr">
+        <div class="about-tag">Alhamdulillah — Trusted by Thousands</div>
+        <h2 class="section-title">Stop Dreaming.<br>Start Building.</h2>
+        <p class="about-desc">Join our 2-hour LIVE webinar to get a proven step-by-step plan for creating a successful halal Islamic e-commerce business from home. No prior experience needed.</p>
+        <a href="#enroll" class="btn btn-primary btn-lg">Book Your Spot Now @ ₹799</a>
+        <!-- Stats with separation line between each item -->
+        <div class="about-stats">
+          <div class="astat-item">
+            <div class="astat-n">33,495+</div>
+            <div class="astat-l">People Trusted Us</div>
+          </div>
+          <div class="astat-item">
+            <div class="astat-n">₹2 Cr+</div>
+            <div class="astat-l">Revenue Generated</div>
+          </div>
+          <div class="astat-item">
+            <div class="astat-n">4.9★</div>
+            <div class="astat-l">Average Rating</div>
+          </div>
+        </div>
+      </div>
+      <div class="sr d2">
+        <div class="price-card">
+          <div class="price-card-pat" aria-hidden="true">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="cp" x="0" y="0" width="56" height="56" patternUnits="userSpaceOnUse">
+                  <polygon points="28,2 32,12 42,8 41,18 50,18 45,26 50,34 41,34 42,44 32,40 28,48 24,40 14,44 15,34 6,34 11,26 6,18 15,18 14,8 24,12" fill="none" stroke="rgba(240,192,64,1)" stroke-width=".7"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#cp)"/>
+            </svg>
+          </div>
+          <div class="price-card-inner">
+            <div class="price-emoji" aria-hidden="true">🕌</div>
+            <div class="price-title">Halal Ecommerce Bootcamp</div>
+            <div class="price-desc">A complete 2-day live workshop to launch your Islamic online business from scratch</div>
+            <span class="price-old">₹5,000+ value inside</span>
+            <span class="price-main">₹799/-</span>
+            <span class="price-note">One-time payment • Lifetime access to recordings</span>
+            <div class="price-feats">
+              <div class="price-feat"><span class="price-feat-icon" aria-hidden="true">✓</span>Live 2-day workshop with Q&amp;A</div>
+              <div class="price-feat"><span class="price-feat-icon" aria-hidden="true">✓</span>3 exclusive bonus resources (₹5K value)</div>
+              <div class="price-feat"><span class="price-feat-icon" aria-hidden="true">✓</span>Namaz-friendly schedule</div>
+              <div class="price-feat"><span class="price-feat-icon" aria-hidden="true">✓</span>100% money-back guarantee</div>
+            </div>
+            <a href="#enroll" class="btn btn-primary btn-full btn-lg">Book Your Spot Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURES / MODULES
+============================================================ -->
+<section class="feat-sec section-pad" id="features">
+  <div class="container">
+    <div class="sr text-center">
+      <div class="label" style="justify-content:center;">What You'll Learn</div>
+      <h2 class="section-title">Inside the Workshop</h2>
+      <p class="section-sub" style="margin:0 auto;">6 power-packed modules — from zero to running your own halal online store.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card sr d1">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=480&q=75&auto=format&fit=crop" alt="Launch your online store" loading="lazy" width="480" height="165">
+          <div class="feat-img-overlay" aria-hidden="true"></div>
+          <div class="feat-num-badge">Module 01</div>
+        </div>
+        <div class="feat-body"><div class="feat-title">Launch Your Halal Online Store from Home – Step by Step</div></div>
+      </div>
+      <div class="feat-card sr d2">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=480&q=75&auto=format&fit=crop" alt="Halal business principles" loading="lazy" width="480" height="165">
+          <div class="feat-img-overlay" aria-hidden="true"></div>
+          <div class="feat-num-badge">Module 02</div>
+        </div>
+        <div class="feat-body"><div class="feat-title">Halal &amp; Haram in Business — Made Clear &amp; Simple</div></div>
+      </div>
+      <div class="feat-card sr d3">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=480&q=75&auto=format&fit=crop" alt="Business models" loading="lazy" width="480" height="165">
+          <div class="feat-img-overlay" aria-hidden="true"></div>
+          <div class="feat-num-badge">Module 03</div>
+        </div>
+        <div class="feat-body"><div class="feat-title">Beginner-Friendly Business Models with Low Investment</div></div>
+      </div>
+      <div class="feat-card sr d1">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=480&q=75&auto=format&fit=crop" alt="Success stories" loading="lazy" width="480" height="165">
+          <div class="feat-img-overlay" aria-hidden="true"></div>
+          <div class="feat-num-badge">Module 04</div>
+        </div>
+        <div class="feat-body"><div class="feat-title">Real-Life Success Stories of Halal Online Businesses</div></div>
+      </div>
+      <div class="feat-card sr d2">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=480&q=75&auto=format&fit=crop" alt="Product selection" loading="lazy" width="480" height="165">
+          <div class="feat-img-overlay" aria-hidden="true"></div>
+          <div class="feat-num-badge">Module 05</div>
+        </div>
+        <div class="feat-body"><div class="feat-title">How to Find Winning Products &amp; Attract Muslim Customers</div></div>
+      </div>
+      <div class="feat-card sr d3">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=480&q=75&auto=format&fit=crop" alt="Live Q&A session" loading="lazy" width="480" height="165">
+          <div class="feat-img-overlay" aria-hidden="true"></div>
+          <div class="feat-num-badge">Module 06</div>
+        </div>
+        <div class="feat-body"><div class="feat-title">Live Q&amp;A: Get Clarity on Halal Income &amp; Business Growth</div></div>
+      </div>
+    </div>
+    <div class="text-center sr" style="margin-top:40px;">
+      <a href="#enroll" class="btn btn-primary btn-lg">Enroll Now @ ₹799 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REVENUE / GUARANTEE
+============================================================ -->
+<section class="rev-sec section-pad">
+  <div class="container">
+    <div class="rev-grid">
+      <div class="sr">
+        <div class="label">Proven Results</div>
+        <div class="rev-num">₹2 Cr+</div>
+        <div class="rev-label">Revenue Generated in 10 Months</div>
+        <div class="rev-note">With ₹85L+ in ad spend — real orders, real customers, real retention. No fluff, no fake screenshots.</div>
+        <a href="#enroll" class="btn btn-primary btn-lg" style="margin-top:28px;">I Want These Results Too →</a>
+      </div>
+      <div class="sr d2">
+        <div class="guar-card">
+          <div class="guar-icon" aria-hidden="true">🤝</div>
+          <div class="guar-title">Your Trust is an Amanah — 100% Guarantee</div>
+          <p class="guar-text">We stand behind every rupee you invest. If you don't find value in the workshop, we will refund you — no questions asked, no hassle. Your trust matters more than any transaction.</p>
+          <a href="#enroll" class="btn btn-primary btn-full btn-lg" style="margin-top:24px;">Claim Your Spot Safely</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE
+============================================================ -->
+<section class="marquee-sec" aria-label="Partners and integrations">
+  <div class="marquee-head">Official Partners &amp; Integrations</div>
+  <div class="marquee-track" aria-hidden="true">
+    <div class="marquee-inner">
+      <div class="m-logo"><svg viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#6C63FF"/><text x="38" y="21" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="13" fill="currentColor">Cashfree</text></svg></div>
+      <div class="m-sep"></div>
+      <div class="m-logo"><svg viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 14 Q14 2 24 14 Q34 26 44 14 Q54 2 64 14 Q74 26 76 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg><span>Meta Business Partner</span></div>
+      <div class="m-sep"></div>
+      <div class="m-logo"><svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="5" width="20" height="20" rx="4" fill="#96BF48"/><text x="28" y="21" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="13" fill="currentColor">Shopify Partner</text></svg></div>
+      <div class="m-sep"></div>
+      <div class="m-logo"><svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="15" r="10" fill="#E8334A"/><text x="28" y="21" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="13" fill="currentColor">Shiprocket Partner</text></svg></div>
+      <div class="m-sep"></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="m-logo"><svg viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#6C63FF"/><text x="38" y="21" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="13" fill="currentColor">Cashfree</text></svg></div>
+      <div class="m-sep"></div>
+      <div class="m-logo"><svg viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 14 Q14 2 24 14 Q34 26 44 14 Q54 2 64 14 Q74 26 76 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg><span>Meta Business Partner</span></div>
+      <div class="m-sep"></div>
+      <div class="m-logo"><svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="5" width="20" height="20" rx="4" fill="#96BF48"/><text x="28" y="21" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="13" fill="currentColor">Shopify Partner</text></svg></div>
+      <div class="m-sep"></div>
+      <div class="m-logo"><svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="15" r="10" fill="#E8334A"/><text x="28" y="21" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="13" fill="currentColor">Shiprocket Partner</text></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BONUSES
+============================================================ -->
+<section class="bonus-sec section-pad">
+  <div class="container">
+    <div class="bonus-layout">
+      <div class="sr">
+        <div class="label">Exclusive Bonuses</div>
+        <h2 class="section-title">Get All This Inside The Workshop</h2>
+        <p class="section-sub" style="margin-bottom:32px;">Register right now and get access to 3 special bonuses worth ₹5,000 — absolutely FREE with your enrolment.</p>
+        <a href="#enroll" class="btn btn-primary btn-lg">Enroll Now @ ₹799 →</a>
+      </div>
+      <div class="sr d2">
+        <div class="bonus-grid">
+          <div class="bonus-card">
+            <div class="bonus-tag">Bonus #1</div>
+            <div class="bonus-title">10 Premium Shopify Themes</div>
+            <div class="bonus-sub">Ready-to-use store designs worth ₹1,500</div>
+          </div>
+          <div class="bonus-card">
+            <div class="bonus-tag">Bonus #2</div>
+            <div class="bonus-title">Ecommerce Roadmap Ebook</div>
+            <div class="bonus-sub">Guide to reaching ₹3 Lakh/month</div>
+          </div>
+          <div class="bonus-card" style="grid-column:1/-1;">
+            <div class="bonus-tag">Bonus #3</div>
+            <div class="bonus-title">Financial Management PDF</div>
+            <div class="bonus-sub">Track, save &amp; grow your halal profits the right way</div>
+          </div>
+        </div>
+        <div class="total-box">
+          <div class="total-label">Total Value Inside</div>
+          <div class="total-num">₹5,000</div>
+          <div class="total-note">All yours for just ₹799 today</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section class="test-sec section-pad">
+  <div class="container">
+    <div class="sr text-center">
+      <div class="label" style="justify-content:center;">Student Voices</div>
+      <h2 class="section-title">Real People, Real Results</h2>
+    </div>
+    <div class="test-grid">
+      <div class="tcard sr d1">
+        <div class="tcard-stars" aria-label="5 stars">★★★★★</div>
+        <p class="tcard-quote">"FiqrTaalim webinar was good. I learnt how to start an online store from home. Very clear and easy to understand."</p>
+        <div class="tcard-foot"><div class="tcard-av" aria-hidden="true">AK</div><div><div class="tcard-name">Ahmed Khan</div><div class="tcard-role">Student</div></div></div>
+      </div>
+      <div class="tcard sr d2">
+        <div class="tcard-stars" aria-label="5 stars">★★★★★</div>
+        <p class="tcard-quote">"I was looking for a halal way to earn from home. This course helped me plan a small online business. Thanks FiqrTaalim!"</p>
+        <div class="tcard-foot"><div class="tcard-av" aria-hidden="true">AB</div><div><div class="tcard-name">Aisha Bano</div><div class="tcard-role">Homemaker</div></div></div>
+      </div>
+      <div class="tcard sr d3">
+        <div class="tcard-stars" aria-label="5 stars">★★★★★</div>
+        <p class="tcard-quote">"Presenters explained step by step how to build an e-commerce store. Price was fair. I liked their refund guarantee."</p>
+        <div class="tcard-foot"><div class="tcard-av" aria-hidden="true">SP</div><div><div class="tcard-name">Sameer Patel</div><div class="tcard-role">Working Professional</div></div></div>
+      </div>
+      <div class="tcard sr d1">
+        <div class="tcard-stars" aria-label="5 stars">★★★★★</div>
+        <p class="tcard-quote">"As a student I don't have much money or time. This webinar showed simple ways to start. Felt honest and friendly."</p>
+        <div class="tcard-foot"><div class="tcard-av" aria-hidden="true">FB</div><div><div class="tcard-name">Fatima Begum</div><div class="tcard-role">Student</div></div></div>
+      </div>
+      <div class="tcard sr d2">
+        <div class="tcard-stars" aria-label="5 stars">★★★★★</div>
+        <p class="tcard-quote">"Good course. After this I know how to pick products, setup store and start selling. Allah bless the FiqrTaalim team."</p>
+        <div class="tcard-foot"><div class="tcard-av" aria-hidden="true">IS</div><div><div class="tcard-name">Imran Sheikh</div><div class="tcard-role">Entrepreneur</div></div></div>
+      </div>
+      <div class="tcard sr d3">
+        <div class="tcard-stars" aria-label="5 stars">★★★★★</div>
+        <p class="tcard-quote">"Was working 9–5 and wanted extra income. FiqrTaalim helped me learn online business steps. Trainers explained in simple Hinglish."</p>
+        <div class="tcard-foot"><div class="tcard-av" aria-hidden="true">SN</div><div><div class="tcard-name">Salma Noor</div><div class="tcard-role">Working Professional</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ENROLL FORM
+============================================================ -->
+<section class="form-sec section-pad" id="enroll">
+  <div class="container">
+    <div class="form-wrap">
+      <div class="sr text-center">
+        <div class="label" style="justify-content:center;">Limited Seats Available</div>
+        <h2 class="section-title">Begin Your Learning Journey</h2>
+        <p class="section-sub" style="margin:0 auto;">Enter your details and take the first step towards building a halal income from home.</p>
+      </div>
+      <div class="form-card sr d2">
+        <div class="urgency-bar">
+          🔥 Only <strong id="formSeats">23</strong> spots remaining — Don't miss out!
+        </div>
+        <form id="enrollForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="f-name">Full Name</label>
+            <input class="form-input" id="f-name" type="text" placeholder="Enter your full name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-email">Email Address</label>
+            <input class="form-input" id="f-email" type="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group" style="margin-bottom:24px;">
+            <label class="form-label" for="f-phone">WhatsApp Number</label>
+            <input class="form-input" id="f-phone" type="tel" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg" id="enrollBtn">
+            Book Your Spot @ ₹799 →
+          </button>
+          <p class="form-note">🔒 Secure payment &nbsp;•&nbsp; 100% refund guarantee if not satisfied.<br>By registering you agree to receive course updates. We respect your privacy.</p>
+        </form>
+        <div id="formSuccess" style="display:none;text-align:center;padding:24px 0;">
+          <div style="font-size:3.5rem;margin-bottom:16px;" aria-hidden="true">🎉</div>
+          <h3 class="serif" style="color:var(--g1);font-size:1.55rem;margin-bottom:8px;font-weight:900;">JazakAllah Khair!</h3>
+          <p style="color:var(--muted);font-size:.95rem;">Your spot is reserved! Check your WhatsApp &amp; email for confirmation details.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Fiqr<span>Taalim</span></div>
+        <p class="foot-desc">Empowering Muslims to build halal businesses from home. Trusted by 33,495+ learners across India and beyond.</p>
+      </div>
+      <div>
+        <div class="foot-col-head">Quick Links</div>
+        <a href="#features" class="foot-link">What's Inside</a>
+        <a href="#enroll" class="foot-link">Enroll Now</a>
+        <a href="#" class="foot-link">FAQ</a>
+        <a href="#" class="foot-link">Refund Policy</a>
+      </div>
+      <div>
+        <div class="foot-col-head">Contact</div>
+        <a href="mailto:info@fiqrtaalim.com" class="foot-link">info@fiqrtaalim.com</a>
+        <a href="mailto:support@fiqrtaalim.com" class="foot-link">support@fiqrtaalim.com</a>
+        <div style="margin-top:16px;" class="foot-col-head">Social</div>
+        <a href="#" class="foot-link">YouTube</a>
+        <a href="#" class="foot-link">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-copy">© 2025 FiqrTaalim. All rights reserved.</p>
+      <div style="display:flex;gap:18px;">
+        <a href="#" class="foot-link" style="font-size:.72rem;">Privacy Policy</a>
+        <a href="#" class="foot-link" style="font-size:.72rem;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY BOTTOM CTA BAR — wide, fixed, 24px radius button
+============================================================ -->
+<div class="sticky-cta-bar" id="stickyCta">
+  <div class="sticky-cta-info">
+    <div class="sticky-cta-price">₹799 <span>only</span></div>
+    <div class="sticky-cta-date">28th &amp; 29th Mar — Live Webinar</div>
+  </div>
+  <a href="#enroll" class="sticky-cta-btn">Book Your Spot @ ₹799 →</a>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>
