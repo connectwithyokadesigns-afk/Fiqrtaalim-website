@@ -43,7 +43,7 @@ a{text-decoration:none;color:inherit;}
   --sh-lg:0 16px 56px rgba(10,112,64,.2);
   --sh-xl:0 28px 80px rgba(6,77,46,.28);
   /* Changed: 24px radius instead of full pill for buttons */
-  --btn-r:24px;
+  --btn-r:14px;
   --r:14px;
   --r-lg:22px;
   --r-xl:32px;
@@ -329,7 +329,7 @@ a{text-decoration:none;color:inherit;}
   position:relative;z-index:2;width:100%;padding:60px 0 70px;
   display:flex;flex-direction:column;align-items:center;
 }
-@media(max-width:600px){.hero-inner{padding:40px 0 70px;}}
+@media(max-width:600px){.hero-inner{padding:40px 20px 70px;}}
 
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
@@ -389,7 +389,7 @@ a{text-decoration:none;color:inherit;}
 @media(max-width:520px){.info-grid{grid-template-columns:1fr;gap:14px;}}
 
 /* Date & Time card — centred */
-.info-card--date{text-align:center;}
+.info-card--date{text-align:left;}
 /* Language card — left-aligned */
 .info-card--lang{text-align:left;}
 /* Format card — default */
@@ -405,7 +405,7 @@ a{text-decoration:none;color:inherit;}
   border:1.5px solid rgba(13,145,82,.15);
   display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.4rem;
 }
-.info-card--date .info-icon{margin-left:auto;margin-right:auto;}
+.info-card--date .info-icon{margin-right:auto;}
 .info-title{font-size:.82rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;}
 .info-val{font-size:1.25rem;font-weight:800;color:var(--g2);margin-bottom:5px;}
 .info-sub{font-size:.83rem;color:var(--muted);line-height:1.55;}
@@ -772,7 +772,7 @@ body{padding-bottom:76px;}
 ============================================================ */
 .countdown-ribbon{
   background:linear-gradient(90deg,#042A1A 0%,#0A7040 50%,#042A1A 100%);
-  padding:10px 0;text-align:center;
+  padding:10px 20px;text-align:center;
   font-size:.8rem;color:rgba(255,255,255,.85);font-weight:600;
   letter-spacing:.04em;position:relative;z-index:99;
 }
